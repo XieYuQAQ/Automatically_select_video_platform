@@ -1,0 +1,21 @@
+<script src="/app.js"></script>
+<script src="https://zerokami.cn/js/lib.js"></script>//由于我网站使用的是Jquery，下面也是对应使用Jquery的方式，这里我直接从我的网站引入它作为示范
+<div id="videoContainer">
+  <p>请稍等，正在根据您的网络加载播放器……</p>
+</div>
+
+<script>
+  function loadBilibiliVideo() {
+      const videoHtml = ``;//存放哔哩哔哩视频平台的外链播放器代码
+      return videoHtml;}
+  function loadYouTubeVideo() {
+      const videoHtml = ``;//存放YouTuBe视频平台的外链播放器代码
+      return videoHtml;}
+  checkGoogle().then(status => {
+  if (status === 0) {
+        $("#videoContainer").html(loadBilibiliVideo());
+  } else {
+        $("#videoContainer").html(loadYouTubeVideo());
+    }
+  });
+</script>
